@@ -1,0 +1,66 @@
+table dim_country
+	lineageTag: 49363b4c-af6b-49e1-b9ea-ff9cf3002333
+	sourceLineageTag: [dbo].[dim_country]
+
+	column CountryCode
+		dataType: string
+		lineageTag: 8fba6e92-aa04-4c55-821e-00eb923a30ad
+		sourceLineageTag: CountryCode
+		summarizeBy: none
+		sourceColumn: CountryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryName_EN
+		dataType: string
+		lineageTag: d8df0095-8ba7-416d-ae37-04f930426272
+		sourceLineageTag: CountryName_EN
+		summarizeBy: none
+		sourceColumn: CountryName_EN
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryName_FR
+		dataType: string
+		lineageTag: 325c56ee-3139-4501-89f8-32dd4e6a2fe7
+		sourceLineageTag: CountryName_FR
+		summarizeBy: none
+		sourceColumn: CountryName_FR
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryName_NL
+		dataType: string
+		lineageTag: 64d8c0e0-eebc-4345-b22c-f525dbb74dbb
+		sourceLineageTag: CountryName_NL
+		summarizeBy: none
+		sourceColumn: CountryName_NL
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: d6f760df-47b6-4e00-aa5c-3e3c856c0c40
+		sourceLineageTag: Region
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column PopulationThousands
+		dataType: int64
+		formatString: 0
+		lineageTag: bc421637-e8e9-4620-9c29-654468751ad0
+		sourceLineageTag: PopulationThousands
+		summarizeBy: none
+		sourceColumn: PopulationThousands
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_country = entity
+		mode: directLake
+		source
+			entityName: dim_country
+			schemaName: dbo
+			expressionSource: 'DirectLake - EUCitizensLakehouse'
+

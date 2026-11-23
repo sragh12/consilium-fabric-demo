@@ -1,0 +1,74 @@
+table dim_indicator
+	lineageTag: 15984245-0325-4fe2-b397-3800ad828126
+	sourceLineageTag: [dbo].[dim_indicator]
+
+	column IndicatorCode
+		dataType: string
+		lineageTag: 185d86d3-0976-484c-9880-aae7bd160bc3
+		sourceLineageTag: IndicatorCode
+		summarizeBy: none
+		sourceColumn: IndicatorCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column IndicatorName_EN
+		dataType: string
+		lineageTag: 1a362b65-82bd-45e3-8ba7-116af1320582
+		sourceLineageTag: IndicatorName_EN
+		summarizeBy: none
+		sourceColumn: IndicatorName_EN
+
+		annotation SummarizationSetBy = Automatic
+
+	column IndicatorName_FR
+		dataType: string
+		lineageTag: 254a140c-1ec8-4b78-90e1-3eba98b87e0a
+		sourceLineageTag: IndicatorName_FR
+		summarizeBy: none
+		sourceColumn: IndicatorName_FR
+
+		annotation SummarizationSetBy = Automatic
+
+	column IndicatorName_NL
+		dataType: string
+		lineageTag: de3341c3-b2a9-47da-9b34-9f3a8ec649ca
+		sourceLineageTag: IndicatorName_NL
+		summarizeBy: none
+		sourceColumn: IndicatorName_NL
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 3988ec20-cdeb-49bf-801e-f98b97c29758
+		sourceLineageTag: Category
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unit
+		dataType: string
+		lineageTag: 36eeecf4-5d4e-4792-b410-50de7258430d
+		sourceLineageTag: Unit
+		summarizeBy: none
+		sourceColumn: Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Direction
+		dataType: string
+		lineageTag: 91ac57ae-d1dd-404a-9640-0283180092a6
+		sourceLineageTag: Direction
+		summarizeBy: none
+		sourceColumn: Direction
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_indicator = entity
+		mode: directLake
+		source
+			entityName: dim_indicator
+			schemaName: dbo
+			expressionSource: 'DirectLake - EUCitizensLakehouse'
+

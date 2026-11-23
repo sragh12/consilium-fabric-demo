@@ -1,0 +1,8 @@
+relationship 7c43fc64-f8b6-f605-788b-b9efcd97ccd9
+	fromColumn: fact_indicator.CountryCode
+	toColumn: dim_country.CountryCode
+
+relationship 3fb829c7-2c6f-33e8-e552-4a50a6af7f68
+	fromColumn: fact_indicator.IndicatorCode
+	toColumn: dim_indicator.IndicatorCode
+

@@ -1,0 +1,11 @@
+expression 'DirectLake - EUCitizensLakehouse' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/430b6bd7-2116-42be-9e4b-ef052e523d1c/9f0bf933-5bc2-4c2a-8f69-161bf930b7b3", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: cd57db22-77cd-4b49-b67f-beb0bfaf1c17
+
+	annotation PBI_IncludeFutureArtifacts = False
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[dim_translation]"}},"objectType":"Table"}]
+
