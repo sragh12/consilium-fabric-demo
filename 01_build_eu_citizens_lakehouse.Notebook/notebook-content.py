@@ -26,6 +26,18 @@
 # Synthetic demo data only. Attach this notebook to a Fabric Lakehouse before running.
 
 
+# CELL ********************
+
+df = spark.sql("SELECT * FROM EUCitizensLakehouse.dbo.dim_country LIMIT 1000")
+display(df)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## Initialize notebook
